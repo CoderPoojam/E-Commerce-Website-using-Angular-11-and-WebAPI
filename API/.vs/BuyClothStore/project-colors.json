@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cb4b1985-f30d-4b7a-83f2-a395e2239e44": {
+      "ProjectGuid": "cb4b1985-f30d-4b7a-83f2-a395e2239e44",
+      "DisplayName": "BuyClothStore",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
