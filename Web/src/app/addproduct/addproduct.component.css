@@ -1,0 +1,26 @@
+
+body{
+    width: 100%;
+    height:100%;
+    margin: 0;
+    background-image: url("../../assets/shopping.jpg");
+    background-size:cover ;
+    background-position: center center;
+}
+form {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form-group {
+    position: center;
+    margin-bottom: 20px;
+    width: 85%;
+}
+
+.form-control.ng-touched.ng-invalid{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset rgb(255,0,0,0.2 );
+}
+
+

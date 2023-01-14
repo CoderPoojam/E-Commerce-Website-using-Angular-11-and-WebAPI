@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha-384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <style>
+       
+        .fa-exclamation-circle {
+            color: rgb(196, 18, 18);
+        }
+    </style>
+    </head>
+<body>
+
+  <div class="row" >
+    <div class="col-md-3" appTestdirective *ngFor="let e of cloths" >
+        <div class="card" style="margin-top: 10px;margin-bottom: 10px;">
+            <img src="{{e.imageUrl}}" class="card-img-top" alt="..." >
+            <div class="card-body">
+              <h5 class="card-title">{{e.cName}} <span class="badge badge-success p-1">
+                4.4<i class="fa fa-star" style="font-size: 11px;" ></i></span></h5>
+                <p class="card-text" style="font-family:Garamond;margin-left: 30px; font-size: 20px;">Rs.{{e.cPrice}}.00
+                    <a href="#" routerLink="{{e.cId}}" class="btn btn-info" style="margin-left: 30px;">Read more...</a>
+                </p>
+                
+                <p class="options" style="font-family: Garamond; margin-left: 80px;">
+                    <a href="#" routerLink="/updateproduct/{{e.cId}}">Update</a>    |
+                    <a href="#" routerLink="/deleteproduct/{{e.cId}}">Delete</a>
+                </p>
+                
+            </div>
+          </div>
+    </div>
+    </div>
+</body>
+</html>

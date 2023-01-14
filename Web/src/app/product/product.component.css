@@ -1,0 +1,35 @@
+body{
+    
+    margin:0;
+    padding: 0;
+}
+
+h4{
+    
+    font-weight: bold;
+    font-family: Papyrus;
+    text-align: center;
+    color:maroon;
+    font-weight:bolder;
+}
+
+h5{
+    font-weight: bold;
+    font-family: Garamond;
+}
+
+body{
+    width: 100%;
+    height:100%;
+    margin: 0;
+    background-image: url("../../assets/shopping.jpg");
+    background-size:cover ;
+    background-position: center center;
+}
+
+.options{
+    margin-left: 60px; 
+    font-family: Papyrus; 
+    font-weight: bold;
+}
+

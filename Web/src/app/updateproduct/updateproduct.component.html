@@ -1,0 +1,151 @@
+<!--<form [formGroup]="clothpform" (ngSubmit)="onSubmit(clothpform.value)">
+ <input type="number" name="cId" formControlName="cId" required><br>
+ <input type="text" name="cName" formControlName="cName" required><br>
+ <span style="color: red;" *ngIf="clothpform.controls.cName.errors">Product name should filled</span>
+ <input type="text" name="cFabric" formControlName="cFabric" required><br>
+ <input type="text" name="cSize" formControlName="cSize" required><br>
+ <input type="text" name="cPrice" formControlName="cPrice" required><br>
+ <input type="text" name="imageUrl" formControlName="imageUrl" required><br>
+ <input type="submit">
+</form>-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <section class="vh-30"><!--style="background-image: url(shopping.jpg);"-->
+            <div class="container">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-10 col-xl-11">
+                  <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card-body">
+                      <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+          
+                          <p class="text-center h1 mb-5 mx-1 mx-md-4 mt-4" style="font-family:Garamond;">Update Product</p>
+          
+                          <form [formGroup]="clothpform" (ngSubmit)="onUpdate(clothpform.value)">
+          
+                            <div class="d-flex flex-row align-items-center mb-4 ">
+                              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                 
+                                <label class="label">Product ID:</label>
+                                <input type="number" readonly="true" name="cId" formControlName="cId" class="controlid" required >
+                                 
+                              </div>
+                            </div>
+          
+                            <div class="d-flex flex-row align-items-center mb-4">
+                              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <label class="label">Product Name:</label>
+                                <input type="text" name="cName" formControlName="cName" class="control"  required>
+                                <div class="controlerror">
+                                 <div *ngIf="getcontrol.cName.invalid && getcontrol.cName.touched" class="text-danger">
+                                   <div *ngIf="getcontrol.cName.errors?.required">
+                                       Product Name is required
+                                   </div>
+                                   <div *ngIf="getcontrol.cName.errors?.minlength">
+                                       Name must be at least 4 character long
+                                   </div>
+                                 </div>
+                                </div>
+                              </div>
+                            </div>
+          
+                            <div class="d-flex flex-row align-items-center mb-4">
+                              <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <label class="label">Product Fabric:</label>
+                                <input type="text" name="cFabric" formControlName="cFabric"class="controlfabric" required >
+                                <div class="controlerror">
+                                  <div *ngIf="getcontrol.cFabric.invalid && getcontrol.cFabric.touched" class="text-danger">
+                                    <div *ngIf="getcontrol.cFabric.errors?.required">
+                                        Product fabric is required
+                                    </div>
+                                    <div *ngIf="getcontrol.cFabric.errors?.minlength">
+                                        Name must be at least 4 character long
+                                    </div>
+                                  </div>
+                                 </div>
+                              </div>
+                            </div>
+          
+                            <div class="d-flex flex-row align-items-center mb-4">
+                              <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <label class="label">Product Size:</label>
+                                <input type="text" name="cSize" formControlName="cSize" class="controlsize" required >
+
+                                <div class="controlerror">
+                                  <div *ngIf="getcontrol.cSize.invalid && getcontrol.cSize.touched" class="text-danger">
+                                    <div *ngIf="getcontrol.cSize.errors?.required">
+                                        Product size is required
+                                    </div>
+                                    <div *ngIf="getcontrol.cSize.errors?.maxlength">
+                                        Size must be in string
+                                    </div>
+                                  </div>
+                                 </div>
+                              </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                  <label class="label">Product Price:</label>
+                                    <input type="text" name="cPrice" formControlName="cPrice" class="controlprice" required>
+                                 
+                                    <div class="controlerror">
+                                      <div *ngIf="getcontrol.cPrice.invalid && getcontrol.cPrice.touched" class="text-danger">
+                                        <div *ngIf="getcontrol.cPrice.errors?.required">
+                                            Product price is required
+                                        </div>
+                                      </div>
+                                     </div>
+                                </div>
+                              </div>
+          
+                              <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                <div class="form-outline flex-fill mb-0">
+                                  <label class="label">Product Image:</label>
+                                    <input type="text" name="imageUrl" formControlName="imageUrl" class="control" #image required>
+                                 
+                                    <div class="controlerror">
+                                      <div *ngIf="getcontrol.imageUrl.invalid && getcontrol.imageUrl.touched" class="text-danger">
+                                        <div *ngIf="getcontrol.imageUrl.errors?.required">
+                                            Product Image URL is required
+                                        </div>
+                                      </div>
+                                     </div>
+                                </div>
+                              </div>
+          
+      
+                            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                              <input type="submit" class="btn btn-primary" value="Update Product">
+                              <div class="backbutton" style="margin-left: 20px;">
+                                <button routerLink="/product" class="btn btn-secondary" style="height: 40px; width: 100px;">Back</button>
+                            </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-md-9 col-lg-6 col-xl-7 d-flex align-items-center ">
+                        
+                           <img src="{{image.value}}" style="height: 96%; width: 70%; margin-left: 90px;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          
+    </body>
+</html>

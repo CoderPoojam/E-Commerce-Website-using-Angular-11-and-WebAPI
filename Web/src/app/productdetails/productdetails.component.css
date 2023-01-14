@@ -1,0 +1,256 @@
+.image-grid-container{
+    float: left;
+    width: 58%;
+}
+
+.description-container{
+    min-height: 820px;
+    width: 42%;
+    float: left;
+    padding: 0 0 0 30px;
+    box-sizing: border-box;
+}
+
+.product-info{
+    margin-right: 0;
+    padding: 0 0 10px;
+}
+
+.product-title{
+    color: #282c3f;
+    padding: 0 20px 0 0;
+    font-size: 30px;
+    font-weight: 800px;
+    line-height: 1;
+    font-family: Garamond;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.product-rating{
+    margin-bottom: 12px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: fit-content;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #eaeaec;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #282c3f;
+}
+
+.product-rating .index-separator {
+    margin-left: 8px;
+    margin-top: -2px;
+    color: #d4d5d9;
+    width: 1px;
+}
+
+.product-rating .index-ratingcount {
+    margin-left: 8px;
+    font-weight: 400;
+    color: #535766;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.index-ratingcontainer {
+    width: auto;
+    height: 50px;
+    border-bottom: 1px solid #d4d5d9;
+}
+
+.index{
+        background-position: -171px -28px;
+        width: 24px;
+        height: 24px;
+
+}
+
+.pricecontainer{
+
+        color: #696e79;
+        font-size: 14px;
+        margin-top: 14px;
+        margin-bottom: 5px;
+        display: inline-block;
+    
+}
+
+.productprice{
+    
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1;
+        cursor: pointer;
+        font-family: sans-serif;
+    
+}
+
+.productdiscount{
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    color: #ff905a;
+}
+
+.productsize{
+    margin: 10px 0 24px;
+}
+
+.sizebutton{
+    margin: 0 0 10px;
+    position: relative;
+    line-height: 1;
+}
+
+.sizebutton2{
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.btn1{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+    font-size: 13px;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    position: relative;
+}
+
+.btn2{
+    margin: 10px 10px 10px 0;
+}
+
+.btn3{
+    position: relative;
+}
+
+.btn4{
+    min-height: 48px;
+    min-width: 80px;
+    border-radius: 50px;
+    height: auto;
+    width: auto;
+    padding: 0 10px;
+    font-weight: 500;
+    border: 1px solid #ff3f6c;
+    background-color: #fff;
+    color: #ff3f6c!important;
+}
+
+.productaddtocart{
+    margin-left: 120px;
+    margin-top: 15px;
+    font-size: 0;
+    
+    
+}
+
+.addtobag{
+    margin-left: 0%;
+    display: inline-flex;
+    min-width: 140px;
+    width:60%;
+    
+}
+
+.bag{
+    
+    transform: scale(.8);
+    
+    width: 30px;
+    height: 22px;
+    border-radius: 0;
+    padding: 12px 15px;
+    min-width: 90px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #ff3e6c;
+    border: 1px solid #ff3e6c;
+    color: #fff;
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    text-align: center;
+    width: 70%;
+    margin-right: 3%;
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    font-size: 22px;
+    min-height: 67px;
+    
+
+}
+
+.bagwishlist{
+    transform: scale(.8);
+    
+    width: 30px;
+    height: 22px;
+    border-radius: 0;
+    padding: 12px 15px;
+    min-width: 90px;
+    font-weight: 500;
+    cursor: pointer;
+    
+    border: 1px solid black;
+    color:black;
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    text-align: center;
+    width: 50%;
+    margin-right: 3%;
+    border-radius: 3px;
+    outline: 0;
+    margin-top: 10px;
+    font-size: 22px;
+    min-height: 67px;
+
+}
+
+.addtowishlist{
+    margin-left: 0%;
+    display: inline-flex;
+    min-width: 140px;
+    width:60%;
+}
+
+.info{
+    color: #282c3f;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: Gramond;
+}
+
+.productfabric{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.productfabric2{
+    font-size: 15px;
+}

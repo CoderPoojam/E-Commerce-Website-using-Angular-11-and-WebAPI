@@ -1,0 +1,29 @@
+.logo{
+    width:30%;
+    float: left;
+    line-height: 100px;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    color:#fff;
+    letter-spacing: 5px;
+}
+
+nav{
+    background-color:rgb(203, 20, 220); 
+}
+
+nav a{
+    text-decoration: none;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    font-size: 12px;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+    
+}

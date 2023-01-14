@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha-384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body style="background-color:antiquewhite;">
+        <div class="row">
+            <div class="image-grid-container">
+                <img src="{{product.imageUrl}}" class="card-img-top" alt="..." >
+            </div>
+             <div class="description-container">
+                 <div class="product-info">
+                     <h1 class="product-title">
+                         {{product.cName}}
+                     </h1>
+                     <div class="index-ratingcontainer">
+                        <div class="product-rating">
+                            <div><span class="badge badge-success p-1">
+                                4.4<i class="fa fa-star" style="font-size: 15px;" ></i></span></div>
+                            <span class="index"></span>
+                            <div class="index-seprator">|</div>
+                            <div class="index-ratingcount">
+                                15
+   
+                                Ratings
+                            </div>
+                        </div>
+                     </div>
+                     
+                 </div>
+
+                 <p class="pricecontainer">
+                     <span class="productprice">
+                         <strong>Rs. {{product.cPrice}}</strong>
+                     </span>
+
+                     <span class="productdiscount">
+
+                       (15% OFF)
+                     </span>
+                 </p>
+
+                 <br/>
+                 <div class="productsize">
+                     <div class="sizebutton">
+                        <h4 class="sizebutton2">
+                            Select Size
+                        </h4>  
+                        
+                        <div class="btn1">
+                            <div class="btn2">
+                                <div class="btn3">
+                                    <button class="btn4">
+                                        {{product.cSize}}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                     
+                 </div>
+
+                 <div class="productaddtocart">
+                     <div class="addtobag">
+                         <span class="bag">
+                             <i class="fas fa-shopping-cart"></i>  
+                             Add to Bag
+                         </span>
+                         
+                     </div>
+
+                     <div class="addtowishlist">
+                        <span class="bagwishlist">
+                            <i class="fa fa-heart-o"></i>  
+                            WishList
+                        </span>
+                     </div>
+                        
+                   
+                 </div>
+                 <hr size="20">
+
+
+                 <div class="productfabric">
+                    Fabric Details :
+                     <p class="productfabric2" style="font-family: Gramond; font-weight: normal;">
+                        {{product.cFabric}}
+                     </p>
+                     
+                 </div>
+                 <div class="info">100% Original Products</div>
+                 <div class="info">Pay on delivery might be available</div>
+                 <div class="info">Easy 7 Days return and Exchanges</div>
+                 <div class="info">Try and Buy might be available</div>
+
+                 <br>
+                 <div class="backbutton">
+                     <button routerLink="/product" class="btn btn-secondary" style="height: 40px; width: 70px;">Back</button>
+                 </div>
+             </div>
+        </div>
+        
+    </body>
+</html>
+
